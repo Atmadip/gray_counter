@@ -11,5 +11,12 @@ module gray_counter_tb #(parameter data_width = 4);
    always #5 clk = ~clk;
    
    initial begin 
+      resetn = 1'b 0;
+      #20;
+      resetn = 1'b 1;
+      #100;
+
+      $finish;
+   end
    
 endmodule
